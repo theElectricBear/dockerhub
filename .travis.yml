@@ -13,7 +13,7 @@ deploy:
   region: "us-west-2"
   app: "dockerhub"
   env: "Dockerhub-env"
-  bucker_name: elasticbeanstalk-us-west-2-075083687404
+  bucket_name: elasticbeanstalk-us-west-2-075083687404
   bucket_path: "dockerhub"
   on:
     branch: master
