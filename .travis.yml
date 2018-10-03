@@ -7,3 +7,18 @@ before_install:
 
 script:
   - docker run tetherdev/dockerhub npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-west-2"
+  app: "dockerhub"
+  env: "Dockerhub-env"
+  bucker_name: elasticbeanstalk-us-west-2-075083687404
+  bucket_path: "dockerhub"
+  on:
+    branch: master
+  access_Key_id: $AWS_ACCESS_KEY
+  secre_access_key:
+    secure: "$AWS_SECRET_KEY"
+
+  
